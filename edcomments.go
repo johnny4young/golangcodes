@@ -14,6 +14,6 @@ func main() {
 	if migrate == "yes" {
 		log.Println("Comenzó la migración...")
 		migration.Migrate()
-		log.Println("Finalizòn la migración")
+		log.Println("Finalizó la migración")
 	}
 }
