@@ -7,11 +7,22 @@ import (
 	"net/http"
 	"strconv"
 
+	"golang.org/x/net/websocket"
+
+	"github.com/olahol/melody"
+
 	"github.com/golangcodes/commons"
 	"github.com/golangcodes/configuration"
 
 	"github.com/golangcodes/models"
 )
+
+// Melody permite utilizar realtime
+var Melody *melody.Melody
+
+func init() {
+	Melody = melody.New()
+}
 
 // CommentCreate crea un comentario
 func CommentCreate(w http.ResponseWriter, r *http.Request) {
@@ -39,6 +50,28 @@ func CommentCreate(w http.ResponseWriter, r *http.Request) {
 		m.Message = fmt.Sprintf("Error al registrar el comentario: %s", err)
 		commons.DisplayMessage(w, m)
 		return
+	}
+
+	db.Model(&comment).Related(&comment.User)
+	comment.User[0].Password = ""
+
+	j, err := json.Marshal(&comment)
+	if err != nil {
+		m.Message = fmt.Sprintf("No se pudo convertir el comentario a json: %s", err)
+		m.Code = http.StatusInternalServerError
+		commons.DisplayMessage(w, m)
+		return
+	}
+
+	origin := fmt.Sprintf("http:localhost:%d/", commons.Port)
+	url := fmt.Sprintf("ws://localhost:%d/ws", commons.Port)
+	ws, err := websocket.Dial(url, "", origin)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if _, err := ws.Write(j); err != nil {
+		log.Fatal(err)
 	}
 
 	m.Code = http.StatusCreated
