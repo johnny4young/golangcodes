@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/golangcodes/models"
+	"github.com/johnny4young/golangcodes/models"
 )
 
 // DisplayMessage devuelve un mensaje al cliente

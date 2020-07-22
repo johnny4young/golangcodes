@@ -6,8 +6,8 @@ import (
 
 	jwt "github.com/dgrijalva/jwt-go"
 	"github.com/dgrijalva/jwt-go/request"
-	"github.com/golangcodes/commons"
-	"github.com/golangcodes/models"
+	"github.com/johnny4young/golangcodes/commons"
+	"github.com/johnny4young/golangcodes/models"
 )
 
 // ValidateToken validar el token del cliente

@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 	"log"
 
-	"github.com/golangcodes/models"
+	"github.com/johnny4young/golangcodes/models"
 
 	jwt "github.com/dgrijalva/jwt-go"
 )

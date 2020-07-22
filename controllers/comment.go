@@ -11,10 +11,10 @@ import (
 
 	"github.com/olahol/melody"
 
-	"github.com/golangcodes/commons"
-	"github.com/golangcodes/configuration"
+	"github.com/johnny4young/golangcodes/commons"
+	"github.com/johnny4young/golangcodes/configuration"
 
-	"github.com/golangcodes/models"
+	"github.com/johnny4young/golangcodes/models"
 )
 
 // Melody permite utilizar realtime

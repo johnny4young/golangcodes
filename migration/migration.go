@@ -1,8 +1,8 @@
 package migration
 
 import (
-	"github.com/golangcodes/configuration"
-	"github.com/golangcodes/models"
+	"github.com/johnny4young/golangcodes/configuration"
+	"github.com/johnny4young/golangcodes/models"
 )
 
 func Migrate() {

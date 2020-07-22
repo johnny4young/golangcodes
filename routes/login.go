@@ -1,8 +1,8 @@
 package routes
 
 import (
-	"github.com/golangcodes/controllers"
 	"github.com/gorilla/mux"
+	"github.com/johnny4young/golangcodes/controllers"
 )
 
 // SetLoginRouter router para login

@@ -6,13 +6,13 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/golangcodes/commons"
+	"github.com/johnny4young/golangcodes/commons"
 
 	"github.com/urfave/negroni"
 
-	"github.com/golangcodes/routes"
+	"github.com/johnny4young/golangcodes/routes"
 
-	"github.com/golangcodes/migration"
+	"github.com/johnny4young/golangcodes/migration"
 )
 
 func main() {
