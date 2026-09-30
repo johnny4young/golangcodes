@@ -7,7 +7,7 @@ import (
 
 	"github.com/johnny4young/golangcodes/models"
 
-	jwt "github.com/dgrijalva/jwt-go"
+	jwt "github.com/golang-jwt/jwt/v4"
 )
 
 var (
