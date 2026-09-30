@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/dgrijalva/jwt-go"
+	jwt "github.com/golang-jwt/jwt/v4"
 )
 
 type Claim struct {

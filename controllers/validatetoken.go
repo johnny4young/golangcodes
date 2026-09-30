@@ -4,8 +4,8 @@ import (
 	"context"
 	"net/http"
 
-	jwt "github.com/dgrijalva/jwt-go"
-	"github.com/dgrijalva/jwt-go/request"
+	jwt "github.com/golang-jwt/jwt/v4"
+	"github.com/golang-jwt/jwt/v4/request"
 	"github.com/johnny4young/golangcodes/commons"
 	"github.com/johnny4young/golangcodes/models"
 )
